@@ -7,7 +7,7 @@ import Header from './Components/Header/Header.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
-import LandingPage from './pages/LandingPage'
+import LandingPage from './pages/LandingPage/LandingPage.jsx'
 import CoachPage from './pages/CoachPage';
 
 function App() {
