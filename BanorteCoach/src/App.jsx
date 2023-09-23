@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // pages
-import LandingPage from './pages/LandingPage'
+import LandingPage from './pages/LandingPage/LandingPage.jsx'
 
 function App() {
 
