@@ -6,7 +6,7 @@ const style = StyleSheet.create({
 
     banner: {
         width: 1470,
-        height: 700,
+        height: 750,
         alignItems: "center",
         display: 'flex', // Use flex for layout
         //add backgorud image
@@ -28,7 +28,7 @@ const style = StyleSheet.create({
         justifyContent: 'center', // or other appropriate value
     },
     mainTittle: {
-        //marginTop: 200,
+        marginTop: 200,
         marginleft: 100,
         fontSize: 70,
         color: "white",
@@ -38,7 +38,7 @@ const style = StyleSheet.create({
     },
     startButton: {
         margin: 'auto',
-        marginTop: 100,
+        marginTop: 50,
         width: 200,
         height: 70,
         backgroundColor: colors.primary,
