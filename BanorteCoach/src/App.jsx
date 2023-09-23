@@ -8,7 +8,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
 import LandingPage from './pages/LandingPage/LandingPage.jsx'
-import CoachPage from './pages/CoachPage';
+import CoachPage from './pages/CoachPage/CoachPage';
+import InversionesPage from './pages/InversionesPage/InversionesPage';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/LandingPage" element={<LandingPage />} />
           <Route exact path="/CoachPage" element={<CoachPage />} />
+          <Route exact path="/InversionesPage" element={<InversionesPage />} />
         </Routes>
       </div>
     </>

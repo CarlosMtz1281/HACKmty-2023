@@ -5,8 +5,8 @@ import bannerImg from '../../assets/Skyline2.jpg';
 const style = StyleSheet.create({
 
     banner: {
-        width: 1470,
-        height: 750,
+        width: "100vw",
+        height: "100vh",
         alignItems: "center",
         display: 'flex', // Use flex for layout
         //add backgorud image
