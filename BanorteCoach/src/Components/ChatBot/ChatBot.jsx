@@ -5,9 +5,11 @@ import Chatbot from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css'
 
 
-export const ChatbotComponent = () => {
+export default function ChatBot(activeButton){
+
+  console.log(activeButton);
   return (
-    <div>
+    <div style={{marginLeft:'16vw'}}>
       <Chatbot
         config={config}
         messageParser={MessageParser}

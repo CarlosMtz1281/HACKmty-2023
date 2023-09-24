@@ -79,8 +79,9 @@ function App() {
           <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/LandingPage" element={<LandingPage />} />
           <Route exact path="/CoachPage" element={<CoachPage />} />
+          <Route exact path="/InversionesPage/:userInfo" element={<InversionesPage />} />
           <Route exact path="/InversionesPage" element={<InversionesPage />} />
-        </Routes>
+        </Routes> 
       </div>
     </>
   );

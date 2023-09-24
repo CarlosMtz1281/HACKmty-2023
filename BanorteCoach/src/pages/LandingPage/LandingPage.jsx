@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import style from "./landingStyle.js";
-import { ChatbotComponent } from "../../Components/ChatBot/ChatBot.jsx";
 
 export default function LandingPage() {
   return (
@@ -20,7 +19,7 @@ export default function LandingPage() {
           </Link>
         </div>
       </div>
-      <ChatbotComponent />
+
     </div>
   );
 }

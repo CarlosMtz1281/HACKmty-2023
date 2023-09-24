@@ -10,10 +10,9 @@ export default function CoachPage() {
 
   const generateUser = () => {
     let user = "";
-    for (let i = 0; i < 3; i++) {
-      user += answers[i] + ";";
-    }
-    console.log("User length: " + user.length)
+    user += `Plazo:${answers[0]};`;
+    user += `Dinero:${answers[1]};`;
+    user += `Riesgo:${answers[2]}`;
     return user;
   }
 
@@ -74,17 +73,12 @@ export default function CoachPage() {
               <button style={style.button1} onClick={handleHomeCall}> Regresar a Menu principal</button>
             </Link>
 
-            <Link to="/InversionesPage" onClick={() => console.log(generateUser())}>
+            <Link to={`/InversionesPage/${generateUser()}`}>
               <button style={style.button2} >Guardar Resultados</button>
             </Link>
 
           </div>
-
-
         )}
-
-
-
       </div>
     </div>
   );
