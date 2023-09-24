@@ -69,6 +69,7 @@ const style = StyleSheet.create({
         marginLeft: '15vw',
         marginTop: '-65vh',
         backgroundColor: colors.background,
+        overflow: 'scroll',
     },
 
 
