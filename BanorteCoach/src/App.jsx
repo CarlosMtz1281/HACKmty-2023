@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './Components/Header/Header.jsx'
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Header from "./Components/Header/Header.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
-import LandingPage from './pages/LandingPage/LandingPage.jsx'
-import CoachPage from './pages/CoachPage/CoachPage';
-import InversionesPage from './pages/InversionesPage/InversionesPage';
+import LandingPage from "./pages/LandingPage/LandingPage.jsx";
+import CoachPage from "./pages/CoachPage/CoachPage";
+import InversionesPage from "./pages/InversionesPage/InversionesPage";
 
 function App() {
   const [res, setRes] = useState("Def");
@@ -30,8 +29,8 @@ function App() {
 
   //   // Don't forget to clean up if necessary (e.g., closing a database connection)
   //   connection.end();
-  // }, []); 
-  
+  // }, []);
+
   const [text, setText] = useState("");
   const [text2, setText2] = useState("");
   const [text3, setText3] = useState("");
@@ -64,8 +63,8 @@ function App() {
       // const texto = res.choices[0].message.content;
       console.log(res);
       const texto = extractLastMessage(res);
-      console.log(res)
-      console.log(texto)
+      console.log(res);
+      console.log(texto);
       setRes3(texto);
     } catch (error) {
       console.log(error);
