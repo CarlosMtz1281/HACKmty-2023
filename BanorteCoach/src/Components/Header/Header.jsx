@@ -14,13 +14,13 @@ const Header = () => {
                 <img src={logo} style={styles.logo}/>
                 </Link>
                 <VerticalLineDivider />
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'left', alignItems: 'left', gap: "0px"}}>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'left', alignItems: 'left', gap: "0px" ,color:'white'}}>
                 <div>COACH</div><div>FINANCIERO</div>
                 </div>
             </div>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', gap: "20px", marginRight: '-10rem'}}>
-                <div style={{fontSize: '17px'}}>
+                <div style={{fontSize: '17px', alignContent: 'center', marginTop:'1.4vh', color: 'white'}}>
                     Jose
                 </div>
                 <div>

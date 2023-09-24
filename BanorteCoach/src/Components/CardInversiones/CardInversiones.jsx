@@ -1,4 +1,5 @@
 import style from "./CardInversionesStyle";
+import { useEffect } from "react";
 
 import React from "react";
 // MUI IMPORTS
@@ -44,8 +45,15 @@ const styleModal1 = {
   p: 4,
 };
 
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
 export default function CardInversiones(props) {
-  const { name, percentage, risk } = props;
+  const { name, percentage, meses, dinero } = props;
+    console.log("datos")
+  console.log(meses);
+  console.log(dinero);
 
   const item = () => {
     for (let i = 0; i < inversiones.length; i++) {
@@ -54,7 +62,6 @@ export default function CardInversiones(props) {
       }
     }
   };
-  console.log(item());
   const elemento = item();
   let percentage2 = percentage;
   if (!percentage.includes("%")){
@@ -67,7 +74,46 @@ export default function CardInversiones(props) {
   console.log(name);
   console.log(elemento);
   console.log(elemento.key);
+
+
+  let taza = parseFloat(elemento.Actual.substring(0, elemento.Actual.length - 1));
+  const [interest, setInterest] = React.useState(taza);
+
+
+
+const [saldoFinal, setSaldoFinal] = React.useState(0);
+
+  function calcularSaldo(dinero, meses, interest){
+
+    let taza2 = (taza/100)+1;
+
+    let saldo = dinero;
+    for (let i = 0; i < meses/12; i++) {
+      saldo = saldo * taza2;
+    }
+
+    saldo = parseInt(saldo);
+
+    let saldoStr = ''+saldo;
+
+    let contador = 0;
+    for(let i = (saldoStr.length)-1; i >= 0.; i--){
+        contador++;
+        if(contador == 3){
+            saldo = saldoStr.substring(0, i) + "," + saldoStr.substring(i, saldoStr.length);
+            contador = 0;
+        }
+    }
+    setSaldoFinal(saldo);
+
+  };
+
+  useEffect(() => {
+    // Call calcularSaldo when the component is mounted
+    calcularSaldo(dinero, meses, interest);
+  }, []);
   return (
+
     <div style={style.cardContainer}>
       <img src={imageMap[elemento.key]} style={style.imgContainer} />
 
@@ -77,7 +123,7 @@ export default function CardInversiones(props) {
       </div>
 
       <div style={style.footerContainer}>
-        <h3 style={style.proyeccion}>Saldo final proyectado: 23,300 $</h3>
+        <h3 style={style.proyeccion}>Saldo final proyectado: ${saldoFinal}</h3>
       </div>
 
       <button style={style.button1} onClick={handleOpen}>
@@ -94,7 +140,7 @@ export default function CardInversiones(props) {
         <Box sx={styleModal1}>
           <h1 style={style.modalHead}>{elemento.name}</h1>
           <p style={style.modalTxt}>{elemento.descripcion}</p>
-          <button onClick={handleClose}>Regresar</button>
+          <button style={{color: 'white', backgroundColor: 'black'}} onClick={handleClose}>Regresar</button>
         </Box>
       </Modal>
     </div>

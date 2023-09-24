@@ -12,7 +12,7 @@ import {
 } from "../../../public/backend/gptApi.js";
 import PuffLoader from "react-spinners/PuffLoader";
 
-const MAKE_REQUESTS = true;
+const MAKE_REQUESTS = false;
 
 export default function InversionesPage() {
   const [loading, setLoading] = useState(false);
@@ -71,7 +71,7 @@ export default function InversionesPage() {
         options[i] = options[i].split(":");
       }
 
-      
+
       options = options.filter((option) => option.length === 2);
 
       console.log("Options:", options);
@@ -129,11 +129,46 @@ export default function InversionesPage() {
     console.log(buttonLabel);
   };
 
+  const [montoInverir, setMontoInvertir] = useState('');
+  const [plazo, setPlazo] = useState('');
+
+  function traducirInfo(dinero, meses){
+    let dineroNor = dinero;
+    let mesesNor = meses;
+    let dineroStr = ''+dinero;
+    let contador = 0;
+    console.log("dineroStr", dineroStr)
+    for(let i = (dineroStr.length)-1; i >= 0.; i--){
+        contador++;
+        if(contador == 3){
+            dinero = dineroStr.substring(0, i) + "," + dineroStr.substring(i, dineroStr.length);
+            contador = 0;
+        }
+    }
+    setMontoInvertir(dinero);
+    setPlazo(mesesNor);
+
+  }
+
+  useEffect(() => {
+    traducirInfo(dinero, meses);
+
+  }, [dinero, meses]);
+
   return (
     <div>
       <div style={style.banner}>
         <div style={style.mainWrapper}>
-          <h1 style={style.mainTitle}> Inversiones Sugeridas</h1>
+          <div style={style.HeaderWrap}>
+              <h1 style={style.mainTitle}> Inversiones Sugeridas</h1>
+
+              <div style={style.infoContainer}>
+                  <h4 style={style.montoInicial}>Monto a invertir: {montoInverir}</h4>
+                  <h4 style={style.plazoInicial}>Plazo: {meses} meses</h4>
+              </div>
+
+          </div>
+
 
           {loading ? (
             <>
@@ -160,8 +195,11 @@ export default function InversionesPage() {
                 <Primary
                   investOptions={recomended}
                   activeButton={activeButton}
+                  meses={meses}
+                  dinero={dinero}
                 />
-                <Secondary investOptions={others} activeButton={activeButton} />
+                <Secondary investOptions={others} activeButton={activeButton} meses={meses}
+                  dinero={dinero}/>
                 {activeButton === "Preguntas" && (
                   <ChatBot activeButton={activeButton} />
                 )}
