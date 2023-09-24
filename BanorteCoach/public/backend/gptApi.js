@@ -61,7 +61,7 @@ export async function giveInvestOptions(userContext) {
   const extraDescription = `Las opciones de inversión disponibles
   son las siguientes: ${investOptions}.`;
   const responseType =
-    "una lista de las 4 mejores opciones de inversión, cada una con el nombre de la opción y el porcentaje de recomendación sobre 100, considerando el perfil del usuario. Retorna la lista separada por ';'. En formato 'nombre:porcentaje;'";
+    "una lista de todas las opciones de inversión, cada una con el nombre de la opción y el porcentaje de recomendación sobre 100, ordenada de porcentaje mayor a menor, considerando el perfil del usuario. Retorna la lista separada por ';'. En formato 'nombre:porcentaje;'";
   const message = [
     {
       role: "system",
