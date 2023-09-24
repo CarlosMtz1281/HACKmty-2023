@@ -67,7 +67,8 @@ export default function CardInversiones(props) {
             >
                 <Box sx={styleModal1}>
                 <h1 style={style.modalHead}>{elemento.name}</h1>
-                <p style={style.modalTxt}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta rerum minima asperiores, adipisci iusto voluptatum, molestiae quas quisquam harum temporibus officia atque architecto? Adipisci nihil voluptate harum minus suscipit consectetur!</p>
+                <p style={style.modalTxt}>{elemento.descripcion}</p>
+                <button onClick={handleClose}>Regresar</button>
                 </Box>
             </Modal>
         </div>
