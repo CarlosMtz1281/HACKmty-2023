@@ -8,12 +8,20 @@ export default function CoachPage() {
     <Link to="/LandingPage" />
   };
 
+  const generateUser = () => {
+    let user = "";
+    for (let i = 0; i < 3; i++) {
+      user += answers[i] + ";";
+    }
+    console.log("User length: " + user.length)
+    return user;
+  }
 
   // questionario
   const questions = [
-    '¿Cuanto tiempo quieres invertir tu dinero?',
-    '¿Cuanto dinero vas a invertir?',
-    '¿Cuanto riesgo quieres para tu inversión?',
+    '¿Cuánto tiempo quieres invertir tu dinero?',
+    '¿Cuánto dinero vas a invertir?',
+    '¿Cuánto riesgo quieres para tu inversión?',
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -66,7 +74,7 @@ export default function CoachPage() {
               <button style={style.button1} onClick={handleHomeCall}> Regresar a Menu principal</button>
             </Link>
 
-            <Link to="/InversionesPage">
+            <Link to="/InversionesPage" onClick={() => console.log(generateUser())}>
               <button style={style.button2} >Guardar Resultados</button>
             </Link>
 
