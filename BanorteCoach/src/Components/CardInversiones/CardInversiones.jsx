@@ -10,7 +10,7 @@ import Modal from '@mui/material/Modal';
 
 import inversiones from '../../assets/inversiones';
 
-import img1 from '../../assets/FondosImagenes/Fondo1.jpg';
+import img1 from '../../assets/FondosImagenes/Fondo1.jpeg';
 import img2 from '../../assets/FondosImagenes/Fondo2.jpeg';
 import img3 from '../../assets/FondosImagenes/Fondo3.jpeg';
 import img4 from '../../assets/FondosImagenes/Fondo4.jpeg';

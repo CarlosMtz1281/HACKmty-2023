@@ -21,6 +21,7 @@ export const styles = {
         justifyContent: 'space-around',
         alignItems: 'center',
         gap: '5rem',
+        marginRight: '-20rem',
     },
 
     text: {
@@ -33,6 +34,17 @@ export const styles = {
         width: '15rem',
         hueRotation: 90,
         filter: 'brightness(0) invert(1)',
+    },
+    banorte: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginLeft: '-15vw',
+    },
+    divider: {
+        color: 'white',
+        fontSize: '1.5rem',
 
     }
 }
