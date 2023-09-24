@@ -24,10 +24,6 @@ export default function InversionesPage() {
             </div>
 
 
-
-
-
-
         </div>
 
 
