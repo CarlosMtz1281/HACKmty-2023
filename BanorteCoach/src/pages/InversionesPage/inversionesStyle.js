@@ -83,7 +83,7 @@ const style = StyleSheet.create({
     },
     button: {
         width: '100%',
-        height: '16.25vh',
+        height: '21.66vh',
         borderRadius: '0px',
         backgroundColor: colors.gray,
         fontWeight: 'bold',
