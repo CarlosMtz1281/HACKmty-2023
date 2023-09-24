@@ -4,8 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LandingPage from './pages/LandingPage.jsx';
-import CoachPage from './pages/CoachPage.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

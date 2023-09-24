@@ -6,8 +6,8 @@ import bannerImg from '../../assets/Skyline2.jpg';
 const style = StyleSheet.create({
 
     banner: {
-        width: '100vw',
-        height: '100vh',
+        width: 1470,
+        height: 750,
         alignItems: "center",
         display: 'flex', // Use flex for layout
         //add backgorud image
@@ -20,22 +20,36 @@ const style = StyleSheet.create({
 
 
     },
-    mainTxtWrapper: {
-        marginLeft: 150,
-        width: 1200,
-        height: 400,
-        display: 'flex', // Use flex for layout
-        flexDirection: 'column', // or 'row' based on your design
-        justifyContent: 'center', // or other appropriate value
+    mainWrapper: {
+        marginLeft: 400,
+
+        width: 700,
+        height: 500,
+        borderRadius: 5,
+        backgroundColor: colors.black,
+        opacity: 0.8,
+
     },
     mainTittle: {
-        marginTop: 200,
-        marginleft: 100,
-        fontSize: 70,
+        display: 'inline-block',
+
+        marginTop: '10vh',
+        marginLeft: '3vw',
+        fontSize: 25,
         color: "white",
         fontStyle: "Bold",
         //center text
-        textAlign: "center",
+    },
+    listaRespuestas:{
+        display: 'inline-block',
+
+
+        marginleft: '10vw',
+        fontSize: 25,
+        color: "white",
+
+        //center text
+
     },
     startButton: {
         margin: 'auto',
@@ -51,6 +65,20 @@ const style = StyleSheet.create({
         borderWidth: 2,
 
     },
+
+    button1: {
+        backgroundColor: colors.primary,
+        color: "white",
+        marginTop: '15vh',
+        marginLeft: '5vw',
+
+    },
+    button2: {
+        backgroundColor: colors.primary,
+        color: "white",
+        marginLeft: '7vw',
+
+    }
 
 });
 
