@@ -33,6 +33,7 @@ const Pregunta = ({ question, onNext, onPrevious, isFirstQuestion, inputType}) =
         <select  style={style.dropdown}
 
         value={answer} onChange={(e) => setAnswer(e.target.value)}>
+          <option value="-">-</option>
           <option value="Muy Bajo">Muy Bajo</option>
           <option value="Bajo">Bajo</option>
           <option value="Medio">Medio</option>

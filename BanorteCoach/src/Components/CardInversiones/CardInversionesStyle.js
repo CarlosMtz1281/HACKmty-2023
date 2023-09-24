@@ -92,6 +92,8 @@ const style = StyleSheet.create({
         height: '10vh',
         width: '25vw',
         fontSize: 15,
+        backgroundColor: colors.black,
+        color: colors.white,
     },
     button2:{
         marginTop: '13vh',
@@ -100,6 +102,7 @@ const style = StyleSheet.create({
         height: '10vh',
         width: '15vw',
         fontSize: 15,
+        color: colors.white,
         backgroundColor: colors.primary,
     }
 

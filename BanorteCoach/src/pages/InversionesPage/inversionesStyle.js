@@ -44,14 +44,42 @@ const style = StyleSheet.create({
     },
     mainTxtWrapper: {
         width: "100vw",
+        alignItems:"left",
+        display: 'inline-block',
+    },
+    HeaderWrap:{
+        marginLeft: '125vw',
+        width: "100vw",
         alignItems: "center",
+        display: 'flex', // Use flex for layout
+        //column
+        flexDirection: 'row', // or 'row' based on your design
+
+    },
+    infoContainer:{
+        fontStyle:"italic",
+        marginTop: '3vh',
+        display: 'inline-block',
+    },
+    montoInicial: {
+        marginLeft: '20vw',
+        color: colors.white,
+        fontSize: 20,
+        display: 'inline-block',
+    },
+    plazoInicial: {
+        color: colors.white,
+        fontSize: 20,
+        display: 'inline-block',
+        marginLeft: '5vw',
     },
     mainTitle: {
         marginTop: '5vh',
+        marginLeft: '-55vw',
         fontSize: 40,
         color: colors.white,
         fontStyle: "Bold",
-        textAlign: "center",
+
     },
 
     secondaryWrap: {
@@ -88,11 +116,16 @@ const style = StyleSheet.create({
         backgroundColor: colors.gray,
         fontWeight: 'bold',
         fontSize: '1.5vw',
-        border: 'none',
+        //add whithe border
+        borderWidth: 1,
+        borderColor: colors.black,
+
+        color: colors.white,
     },
 
     activeButton: {
         backgroundColor: colors.primary,
+        color: colors.white,
         outline: 'none',
     },
 })

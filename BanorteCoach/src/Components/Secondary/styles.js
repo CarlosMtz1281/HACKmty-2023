@@ -5,7 +5,7 @@ const style = StyleSheet.create({
    wrap:{
     overflow: 'scroll',
     height: '100%',
-    width: '100%',
+    width: '90vw',
 
    },
 });
