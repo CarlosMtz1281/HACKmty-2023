@@ -1,13 +1,19 @@
+import { colors } from '../../assets/constants'
 
 export const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        width: '10vw',
-        height: '20vh',
-        backgroundColor: 'white',
-        gap: 0,
+    button: {
+        width: '100%',
+        height: '16.25vh',
+        borderRadius: '0px',
+        backgroundColor: colors.gray,
+        fontWeight: 'bold',
+        fontSize: '1.5vw',
+        border: 'none',
     },
+
+    activeButton: {
+        backgroundColor: colors.primary,
+        outline: 'none',
+    },
+    
 }
