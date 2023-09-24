@@ -17,7 +17,7 @@ export default function InversionesPage() {
   const [meses, setMeses] = useState(-1);
   const [dinero, setDinero] = useState(-1);
   const { userInfo } = useParams();
-  console.log(userInfo);
+  // console.log(userInfo);
 
   useEffect(() => {
     async function fetchData() {
@@ -31,34 +31,40 @@ export default function InversionesPage() {
       // const investOptions = await giveInvestOptions(userContext);
       // Use simulated response to avoid making extra unnecessary requests (for debugging).
       const response = {
-        id: "chatcmpl-82CxeGQDl07r8Q0DyOgejmsIpez75",
+        id: "chatcmpl-82FELgmEbUw8unQ3f9VmSPrG24IQo",
         object: "chat.completion",
-        created: 1695537170,
+        created: 1695545893,
         model: "gpt-3.5-turbo-0613",
         choices: [
           {
             index: 0,
             message: {
               role: "assistant",
-              content: "NTEPZO: 80%; NTED: 75%; NTEDIG: 70%; NTECT: 65%",
+              content:
+                "NTEPZO:20.00%;NTED:15.00%;NTEDIG:10.00%;NTECT:5.00%;NTE1:0.00%;NTE2:0.00%;NTE3:0.00%;NTEDLS:0.00%;NTEIPC+:0.00%;",
             },
             finish_reason: "stop",
           },
         ],
-        usage: { prompt_tokens: 751, completion_tokens: 27, total_tokens: 778 },
+        usage: { prompt_tokens: 758, completion_tokens: 71, total_tokens: 829 },
       };
-      // console.log(JSON.stringify(investOptions))
+
+      // console.log(JSON.stringify(investOptions));
       // const options = extractLastMessage(investOptions).split("; ");
-      const options = extractLastMessage(response).split("; ");
-      console.log(options);
+      let options = extractLastMessage(response).split(";");
+      // console.log("Options:",options);
       for (let i = 0; i < options.length; i++) {
         options[i] = options[i].split(":");
       }
 
+      options = options.filter((option) => option.length === 2);
+
       const formatDate = await transformInputData(
-        userInfo.replace(/%20/g, " ")
+        (userInfo && userInfo.length > 15)
+          ? userInfo.replace(/%20/g, " ")
+          : "Plazo:5 meses;Dinero:10,000;Riesgo:Bajo"
       );
-      console.log("Format date:", extractLastMessage(formatDate));
+      // console.log("Format date:", extractLastMessage(formatDate));
       const res = extractLastMessage(formatDate).split(":");
       let months = 10;
       let money = 10000;
@@ -72,7 +78,6 @@ export default function InversionesPage() {
 
       setMeses(months);
       setDinero(money);
-      options.splice(2, 2);
       setInvestOptions(options);
       setLoading(true);
     }
