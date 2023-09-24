@@ -6,15 +6,16 @@ import bannerImg from '../../assets/Skyline2.jpg';
 const style = StyleSheet.create({
 
    preguntaTxt:{
-    fontSize: 30,
-    color: "white",
-    fontStyle: "Bold",
-    //center text
-    marginleft:  '20vw',
-    display: 'block',
-    marginLeft: '5vw',
-    marginRight: '5vw',
-    marginTop: '15vh',
+      height: '10vh',
+      fontSize: 30,
+      color: "white",
+      fontStyle: "Bold",
+      //center text
+      marginleft:  '20vw',
+      display: 'block',
+      marginLeft: '5vw',
+      marginRight: '5vw',
+      marginTop: '15vh',
    },
 
    txtInput: {
@@ -23,7 +24,6 @@ const style = StyleSheet.create({
     marginleft: 400,
     backgroundColor: colors.white,
     color: "black",
-    textAlign: "center",
     borderRadius: 5,
     borderWidth: 2,
     display: 'block',
@@ -33,7 +33,7 @@ const style = StyleSheet.create({
 
    },
    dropdown:{
-        width: 300,
+        width: 400,
         height: 50,
         marginleft: 400,
         backgroundColor: colors.white,
@@ -48,7 +48,7 @@ const style = StyleSheet.create({
    },
 
     firstNextButton:{
-    marginLeft: '35vw',
+    marginLeft: '38.3vw',
     display: 'inline-block',
     marginTop: '15vh',
     backgroundColor: colors.primary,

@@ -40,6 +40,7 @@ export const styles = {
         justifyContent: 'space-around',
         alignItems: 'center',
         flexDirection: 'row',
+        marginLeft: '-15vw',
     },
     divider: {
         color: 'white',

@@ -10,23 +10,15 @@ const Header = () => {
     return(
         <div className="Header" style={styles.Header}>
             <div className="banorte" style={styles.banorte}>
+                <Link to="/LandingPage" style={styles.text}>
                 <img src={logo} style={styles.logo}/>
+                </Link>
                 <VerticalLineDivider />
                 <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'left', alignItems: 'left', gap: "0px"}}>
                 <div>COACH</div><div>FINANCIERO</div>
                 </div>
-            </div> 
-            <div className="paginas" style={styles.paginasHeader}>
-                <div className="LandingPage">
-                    <Link to="/LandingPage" style={styles.text}>LANDING</Link>
-                </div>
-                <div className="CoachPage">
-                    <Link to="/CoachPage" style={styles.text}>COACH</Link>
-                </div>
-                <div className="InversionesPage">
-                    <Link to="/InversionesPage" style={styles.text}>INVERSIONES</Link>
-                </div>
             </div>
+
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', gap: "20px", marginRight: '-10rem'}}>
                 <div style={{fontSize: '17px'}}>
                     Jose
