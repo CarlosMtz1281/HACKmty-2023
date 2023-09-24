@@ -12,7 +12,7 @@ import {
 } from "../../../public/backend/gptApi.js";
 import PuffLoader from "react-spinners/PuffLoader";
 
-const MAKE_REQUESTS = false;
+const MAKE_REQUESTS = true;
 
 export default function InversionesPage() {
   const [loading, setLoading] = useState(false);

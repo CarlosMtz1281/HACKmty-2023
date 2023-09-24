@@ -6,7 +6,7 @@ const style = StyleSheet.create({
     overflow: 'scroll',
     height: '100%',
     width: '90vw',
-
+    overflowX: 'hidden', // Use 'hidden' to hide overflow
    },
 });
 
