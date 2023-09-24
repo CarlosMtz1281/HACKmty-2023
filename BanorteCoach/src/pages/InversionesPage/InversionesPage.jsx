@@ -12,7 +12,7 @@ import {
 } from "../../../public/backend/gptApi.js";
 import PuffLoader from "react-spinners/PuffLoader";
 
-const MAKE_REQUESTS = false;
+const MAKE_REQUESTS = true;
 
 export default function InversionesPage() {
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ export default function InversionesPage() {
               message: {
                 role: "assistant",
                 content:
-                  "NTEPZO:20.00%;NTED:15.00%;NTEDIG:10.00%;NTECT:5.00%;NTE1:0.00%;NTE2:0.00%;NTE3:0.00%;NTEDLS:0.00%;NTEIPC+:0.00%;",
+                  "NTEPZO:20.00;NTED:15.00;NTEDIG:10.00;NTECT:5.00;NTE1:0.00;NTE2:0.00;NTE3:0.00;NTEDLS:0.00;NTEIPC+:0.00;",
               },
               finish_reason: "stop",
             },

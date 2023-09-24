@@ -51,6 +51,8 @@ const styleModal1 = {
 
 export default function CardInversiones(props) {
   const { name, percentage, meses, dinero } = props;
+
+  const [percentage4, setPercentage4] = React.useState(percentage);
     console.log("datos")
   console.log(meses);
   console.log(dinero);
@@ -84,10 +86,11 @@ export default function CardInversiones(props) {
 const [saldoFinal, setSaldoFinal] = React.useState(0);
 
   function calcularSaldo(dinero, meses, interest){
+    let saldo = dinero;
 
     let taza2 = (taza/100)+1;
 
-    let saldo = dinero;
+
     for (let i = 0; i < meses/12; i++) {
       saldo = saldo * taza2;
     }
@@ -108,9 +111,35 @@ const [saldoFinal, setSaldoFinal] = React.useState(0);
 
   };
 
+  function rescateProcentaje(dinero, meses, interest){
+    let saldo = dinero;
+    let taza2 = (taza/100)+1;
+    for (let i = 0; i < meses/12; i++) {
+      saldo = saldo * taza2;
+    }
+
+    saldo = parseInt(saldo);
+    console.log("activa");
+    if(percentage2.includes("%")){
+      percentage2 = percentage2.substring(0, percentage2.length - 1);
+    }
+    let percentage3 = parseInt(percentage2);
+    console.log(percentage3);
+    console.log(saldo);
+    console.log(dinero);
+    if(percentage3 == 0 && saldo > dinero){
+      console.log("entro")
+      percentage3 = percentage3+30.00;
+      percentage3 = percentage3.toString();
+      setPercentage4(percentage3);
+  }
+}
+
   useEffect(() => {
     // Call calcularSaldo when the component is mounted
+
     calcularSaldo(dinero, meses, interest);
+    rescateProcentaje(dinero, meses, interest);
   }, []);
   return (
 
@@ -119,7 +148,7 @@ const [saldoFinal, setSaldoFinal] = React.useState(0);
 
       <div style={style.headerContainer}>
         <h1 style={style.mainInversion}>{elemento.name}</h1>
-        <h3 style={style.compatibilidad}>Compatibilidad {percentage2}</h3>
+        <h3 style={style.compatibilidad}>Compatibilidad {percentage4}%</h3>
       </div>
 
       <div style={style.footerContainer}>
@@ -139,6 +168,7 @@ const [saldoFinal, setSaldoFinal] = React.useState(0);
       >
         <Box sx={styleModal1}>
           <h1 style={style.modalHead}>{elemento.name}</h1>
+          <h3 style={style.modalSubHead}>Tasa: {elemento.Actual}</h3>
           <p style={style.modalTxt}>{elemento.descripcion}</p>
           <button style={{color: 'white', backgroundColor: 'black'}} onClick={handleClose}>Regresar</button>
         </Box>
