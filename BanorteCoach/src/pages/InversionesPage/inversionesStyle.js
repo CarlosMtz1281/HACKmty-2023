@@ -16,8 +16,7 @@ const style = StyleSheet.create({
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover', // You can adjust this based on your requirements
         backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the opacity (0.5 for 50% darkness)
-
-
+        overflow: 'hidden', // Use 'hidden' to hide overflow
     },
     mainWrapper: {
         marginLeft: 0,
