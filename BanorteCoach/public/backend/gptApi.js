@@ -2,7 +2,7 @@ import { OpenAI } from "openai";
 import data from "../data/fondos.json";
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "",
   dangerouslyAllowBrowser: true,
 });
 
