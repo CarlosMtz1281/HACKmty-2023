@@ -48,7 +48,7 @@ const style = StyleSheet.create({
 
 
     mainInversion:{
-        fontSize: 35,
+        fontSize: 25,
         width: '20vw',
         marginTop: '2vh',
         marginLeft: '2vw',

@@ -5,10 +5,25 @@ import React, { useState, useEffect } from 'react';
 import { styles } from './styles';
 import fondosData from '../../assets/inversiones';
 
-export default function Primary() {
+export default function Primary({investOptions, activeButton}){
+    console.log(activeButton)
+    if(activeButton != 'Resultados'){
+        return null;
+    }
+
+    console.log(investOptions)
     return(
         <div>
-            <CardInversiones />
+            {investOptions.map((option) => (
+          // Render CardInversiones for each option, passing it as props
+          <CardInversiones
+            key={option[0]}
+            name={option[0]}
+            percentage={option[1]}
+
+            // Add more props as needed based on your data structure
+          />
+        ))}
 
         </div>
     )
