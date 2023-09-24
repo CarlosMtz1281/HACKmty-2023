@@ -66,7 +66,7 @@ export default function CoachPage() {
               <button style={style.button1} onClick={handleHomeCall}> Regresar a Menu principal</button>
             </Link>
 
-            <Link to="/LandingPage">
+            <Link to="/InversionesPage">
               <button style={style.button2} >Guardar Resultados</button>
             </Link>
 

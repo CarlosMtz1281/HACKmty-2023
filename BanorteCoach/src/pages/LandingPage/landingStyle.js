@@ -39,6 +39,7 @@ const style = StyleSheet.create({
     },
     startButton: {
         margin: 'auto',
+        marginLeft: '34vw',
         marginTop: 50,
         width: 200,
         height: 70,

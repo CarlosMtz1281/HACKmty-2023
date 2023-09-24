@@ -17,6 +17,9 @@ const Header = () => {
                 <div className="CoachPage">
                     <Link to="/CoachPage" style={styles.text}>COACH</Link>
                 </div>
+                <div className="InversionesPage">
+                    <Link to="/InversionesPage" style={styles.text}>INVERSIONES</Link>
+                </div>
             </div>
         </div>
     )
