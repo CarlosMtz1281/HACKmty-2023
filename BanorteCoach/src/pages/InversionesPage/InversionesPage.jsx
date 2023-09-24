@@ -3,6 +3,7 @@ import style from './inversionesStyle.js';
 
 import Primary from '../../Components/Primary/Primary.jsx';
 import Secondary from '../../Components/Secondary/Secondary.jsx';
+import giveInvestOptions from "../../../public/backend/gptApi.js";
 
 export default function InversionesPage() {
   return (
