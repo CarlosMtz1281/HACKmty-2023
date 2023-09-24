@@ -1,5 +1,5 @@
 
-import style from './inversionesStyle.js';
+import style from './InversionesStyle.js';
 
 import Primary from '../../Components/Primary/Primary.jsx';
 import Secondary from '../../Components/Secondary/Secondary.jsx';
