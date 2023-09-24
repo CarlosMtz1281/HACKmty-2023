@@ -99,6 +99,7 @@ export default function CardInversiones(props) {
             >
                 <Box sx={styleModal1}>
                 <h1 style={style.modalHead}>{elemento.name}</h1>
+                <h3 style={style.modalSubHead}>Tasa: {elemento.Actual}</h3>
                 <p style={style.modalTxt}>{elemento.descripcion}</p>
                 <button onClick={handleClose}>Regresar</button>
                 </Box>
