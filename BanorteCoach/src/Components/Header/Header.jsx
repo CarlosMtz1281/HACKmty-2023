@@ -20,7 +20,7 @@ const Header = () => {
             </div>
 
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'right', alignItems: 'right', gap: "20px", marginRight: '-10rem'}}>
-                <div style={{fontSize: '17px'}}>
+                <div style={{fontSize: '17px', alignContent: 'center', marginTop:'1.4vh'}}>
                     Jose
                 </div>
                 <div>

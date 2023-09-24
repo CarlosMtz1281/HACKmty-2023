@@ -46,6 +46,10 @@ const styleModal1 = {
     p: 4,
   };
 
+  const openInNewTab = url => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
 export default function CardInversiones(props) {
     const { name, percentage, risk } = props;
 
@@ -65,7 +69,11 @@ export default function CardInversiones(props) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    console.log(elemento.key);
+
+
+    const [hipeLink, setHipeLink] = React.useState(elemento.link);
+
+    console.log(hipeLink);
     return(
         <div style={style.cardContainer}>
             <img src={imageMap[elemento.key]} style={style.imgContainer}/>
@@ -80,7 +88,8 @@ export default function CardInversiones(props) {
             </div>
 
             <button style={style.button1} onClick={handleOpen}>Informacion del Fondo</button>
-            <button style={style.button2}>Invertir ya</button>
+
+            <button style={style.button2} onClick={()=> openInNewTab(hipeLink)}>Invertir ya</button>
 
             <Modal
                 open={open}
