@@ -9,18 +9,33 @@ export default function InversionesPage() {
   return (
     <div>
 
-        <div style={style.mainTxtWrapper}>
-          <h1 style={style.mainTitle}> Inversiones Sugeridas</h1>
-        </div>
-        <div style={style.investContainer}>
-          <div>
-            <Secondary />
-          </div>
-          <div>
-            <Primary />
-          </div>
+        <div style={style.banner}>
+
+        <div style={style.mainWrapper}>
+
+            <h1 style={style.mainTitle}> Inversiones Sugeridas</h1>
+
+
+              <div style={style.secondaryWrap}>
+                <Secondary />
+              </div>
+              <div style={style.primaryWrap}>
+                <Primary />
+            </div>
+
+
+
+
+
+
         </div>
 
-    </div>
+
+        </div>
+
+        </div>
+
+
+
   )
 }
