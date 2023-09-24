@@ -8,7 +8,7 @@ export default function Primary() {
         <div>
             {fondosData.map((fondo) => (
                 <li>
-                    <img src={fondo.Imagen} />
+                    <img src={process.env.PUBLIC_URL + fondo.Imagen} />
                     <h1>{fondo.Nombre}</h1>
                 </li>
             ))}

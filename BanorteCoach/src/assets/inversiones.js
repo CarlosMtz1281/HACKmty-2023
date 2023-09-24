@@ -1,7 +1,7 @@
 export default[
   {
     "Nombre": "INTECT",
-    "Imagen": "",
+    "Imagen": "src/assets/FondosImagenes/Fondo1.jpeg",
     "Tipo": "liquidez inmediata",
     "Riesgo": "muy bajo",
     "Objetivo": "Preservación de Capital",
@@ -12,6 +12,7 @@ export default[
   },
   {
     "Nombre": "INTECD",
+    "Imagen": "src/assets/FondosImagenes/Fondo2.jpeg",
     "Tipo": "rendimiento adicional a tus ahorros",
     "Riesgo": "muy bajo",
     "Características": "todo digital",
@@ -22,6 +23,7 @@ export default[
   },
   {
     "Nombre": "INTEPZO",
+    "Imagen": "src/assets/FondosImagenes/Fondo3.jpg",
     "Características": "mínimo 91 días",
     "Mínima": "$50,000",
     "Riesgo": "muy bajo",
@@ -33,6 +35,7 @@ export default[
   },
   {
     "Nombre": "INTEDLS",
+    "Imagen": "./FondosImagenes/Fondo4.jpg",
     "Riesgo": "bajo",
     "Objetivo": "Preservación de Capital",
     "Plazo Mínimo": "1 año",
@@ -43,6 +46,7 @@ export default[
   },
   {
     "Nombre": "INTED",
+    "Imagen": "./FondosImagenes/Fondo5.jpg",
     "Riesgo": "moderado",
     "Objetivo": "Rendimiento superior a la deuda",
     "Plazo": "mediano plazo",
@@ -53,6 +57,7 @@ export default[
   },
   {
     "Nombre": "INTE1",
+    "Imagen": "./FondosImagenes/Fondo6.jpg",
     "Riesgo": "moderado a alto",
     "Características": "menor exposición a la renta variable",
     "Objetivo": "Mayor exposición",
@@ -63,6 +68,7 @@ export default[
   },
   {
     "Nombre": "NTE2",
+    "Imagen": "./FondosImagenes/Fondo7.jpg",
     "Características": "Estrategia discrecional",
     "Objetivo": "Mayor exposición en la deuda",
     "Riesgo": "alto",
@@ -73,6 +79,7 @@ export default[
   },
   {
     "Nombre": "NTE3",
+    "Imagen": "./FondosImagenes/Fondo8.jpg",
     "Características": "Estrategia discrecional",
     "Objetivo": "Mayor exposición en la renta",
     "Riesgo": "alto",
@@ -84,6 +91,7 @@ export default[
   },
   {
     "Nombre": "NTEIPC+",
+    "Imagen": "./FondosImagenes/Fondo9.jpg",
     "Riesgo": "muy alto",
     "Características": "bolsa mexicana de valores",
     "Tipo": "pura renta variable",
