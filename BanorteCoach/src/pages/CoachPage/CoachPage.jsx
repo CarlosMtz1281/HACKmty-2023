@@ -63,11 +63,11 @@ export default function CoachPage() {
               ))}
             </ul>
             <Link to="/LandingPage">
-              <button style={style.button1} onClick={handleHomeCall}> Regresar a Menu principal</button>
+              <button style={style.button1} onClick={handleHomeCall}>Cancelar</button>
             </Link>
 
             <Link to="/InversionesPage">
-              <button style={style.button2} >Guardar Resultados</button>
+              <button style={style.button2} >Generar Análisis</button>
             </Link>
 
           </div>

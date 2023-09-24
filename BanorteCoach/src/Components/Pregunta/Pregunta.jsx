@@ -41,11 +41,11 @@ const Pregunta = ({ question, onNext, onPrevious, isFirstQuestion, inputType}) =
 
 
   {isFirstQuestion ? (
-        <button style={style.firstNextButton} onClick={handleNextClick}>Next</button>
+        <button style={style.firstNextButton} onClick={handleNextClick}>Siguiente</button>
       ) : (
         <div>
-          <button style={style.backButton} onClick={handlePreviousClick}>Back</button>
-          <button style={style.nextButton} onClick={handleNextClick}>Next</button>
+          <button style={style.backButton} onClick={handlePreviousClick}>Atrás</button>
+          <button style={style.nextButton} onClick={handleNextClick}>Siguiente</button>
         </div>
       )}
 

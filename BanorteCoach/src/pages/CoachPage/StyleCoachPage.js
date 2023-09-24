@@ -76,7 +76,7 @@ const style = StyleSheet.create({
     button2: {
         backgroundColor: colors.primary,
         color: "white",
-        marginLeft: '7vw',
+        marginLeft: '20vw',
 
     }
 
