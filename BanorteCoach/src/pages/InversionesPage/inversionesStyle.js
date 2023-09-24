@@ -28,7 +28,6 @@ const style = StyleSheet.create({
         marginTop: '8vh',
         borderRadius: 5,
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
-
         //place in center
         alignItems: "center",
         display: 'flex', // Use flex for layout
