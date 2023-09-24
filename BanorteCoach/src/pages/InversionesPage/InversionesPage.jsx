@@ -39,8 +39,24 @@ export default function InversionesPage() {
     fetchData();
   }, []);
 
-  console.log(investOptions);
-  console.log(loading);
+
+  //secondary container procceses
+
+  const buttonLabels = ['Resultados', 'Ver Más', 'Inv. Actuales', 'Preguntas'];
+
+    // Define state to keep track of the currently pressed button
+    const [activeButton, setActiveButton] = useState(null);
+
+    // Function to handle button click
+    const handleButtonClick = (buttonLabel) => {
+      setActiveButton(buttonLabel);
+      console.log(buttonLabel);
+
+    };
+
+
+
+
   return (
     <div>
       <div style={style.banner}>
@@ -50,10 +66,24 @@ export default function InversionesPage() {
           {loading ? (
             <>
               <div style={style.secondaryWrap}>
-                <Secondary />
+                  <div>
+                {buttonLabels.map((label) => (
+                    <button
+                    key={label}
+                    className={`button ${label === activeButton ? 'active' : ''}`}
+                    onClick={() => handleButtonClick(label)}
+                    style={ {... style.button,
+                        ... (label === activeButton ? style.activeButton : {}) }}
+                    >
+                    {label}
+                    </button>
+                ))}
+            </div>
+
+
               </div>
               <div style={style.primaryWrap}>
-                <Primary investOptions = {investOptions}/>
+                <Primary investOptions = {investOptions} activeButton={activeButton}/>
               </div>
             </>
           ) : (
