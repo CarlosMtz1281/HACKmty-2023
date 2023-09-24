@@ -21,9 +21,18 @@ const completionConfig = async (messages, temperature = 0.6) => {
   return completion;
 };
 
+const completionConfigPrecise = async (messages, temperature = 0.2) => {
+  const completion = await openai.chat.completions.create({
+    model: "gpt-4",
+    messages: messages,
+    temperature: temperature,
+  });
+  return completion;
+};
+
 export async function askInputData(question) {
   const extraDescription =
-    "Te preguntan acerca del llenado de datos para perfilación de usuario. Responde con términos fáciles de comprender para el usuario.";
+    "Te preguntan acerca del llenado de datos para perfilación de usuario. Responde con términos fáciles de comprender para el usuario. Responde en pocas palabras.";
   const message = [
     {
       role: "system",
@@ -41,7 +50,7 @@ export async function transformInputData(question) {
   const extraDescription =
     "Recibes una string. Tienes que identificar el tiempo (puede estar en meses o años) y cantidad de dinero.";
   const responseType =
-    "un número indicando la cantidad de meses y un número con solo digitos y un punto decimal, indicando la cantidad de dinero. En formato 'numeroMeses:dinero'. Donde numeroMeses y dinero son números y no contienen otros caracteres.";
+    "un número indicando la cantidad de meses y un número con solo digitos y un punto decimal, indicando la cantidad de dinero. En formato 'numeroMeses:dinero'. Donde numeroMeses y dinero son números y no contienen otros caracteres. Solo regresa 'numeroMeses:dinero' en la respuesta";
 
   const message = [
     {
@@ -53,7 +62,7 @@ export async function transformInputData(question) {
       content: question,
     },
   ];
-  return completionConfig(message);
+  return completionConfigPrecise(message, 0.3);
 }
 
 export async function giveInvestOptions(userContext) {
@@ -61,7 +70,7 @@ export async function giveInvestOptions(userContext) {
   const extraDescription = `Las opciones de inversión disponibles
   son las siguientes: ${investOptions}.`;
   const responseType =
-    "una lista de todas las opciones de inversión, cada una con el nombre de la opción y el porcentaje de recomendación sobre 100, ordenada de porcentaje mayor a menor, considerando el perfil del usuario. Retorna la lista separada por ';'. En formato 'nombre:porcentaje;'";
+    "una lista de todas las opciones de inversión (9 opciones en total), cada una con el nombre de la opción y el porcentaje de recomendación sobre 100, que sea recomendación muy optimista, ordenada de porcentaje mayor a menor, considerando el perfil del usuario. Retorna la lista separada por ';'. En formato 'nombre:porcentaje;'. El nombre sin parentesis. Si el mínimo de inversión es mayor a la cantidad de dinero, establecer compatibilidad de 0.";
   const message = [
     {
       role: "system",
@@ -73,7 +82,7 @@ export async function giveInvestOptions(userContext) {
     },
   ];
 
-  return completionConfig(message);
+  return completionConfigPrecise(message, 0.1);
 }
 
 export async function explainSelectedInvestments(investOptions) {

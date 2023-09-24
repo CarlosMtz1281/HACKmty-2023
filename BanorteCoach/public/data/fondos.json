@@ -50,6 +50,7 @@
     "Características": "menor exposición a la renta variable",
     "Objetivo": "Mayor exposición",
     "Plazo": "conservador",
+    "Mínima": "$50",
     "Plazo Mínimo": "3 años",
     "Antes": "0.39%",
     "Actual": "-1%"
@@ -59,6 +60,7 @@
     "Objetivo": "Mayor exposición en la deuda",
     "Riesgo": "alto",
     "Plazo": "largo plazo",
+    "Mínima": "$50",
     "Plazo Mínimo": "3 años",
     "Antes": "0.91%",
     "Actual": "-1.67%"
@@ -69,6 +71,7 @@
     "Riesgo": "alto",
     "Tolerancia al Riesgo": "alta",
     "Plazo": "largo plazo",
+    "Mínima": "$50",
     "Plazo Mínimo": "3 años",
     "Antes": "1.86%",
     "Actual": "-1.5%"
