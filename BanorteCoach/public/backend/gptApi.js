@@ -37,6 +37,25 @@ export async function askInputData(question) {
   return completionConfig(message);
 }
 
+export async function transformInputData(question) {
+  const extraDescription =
+    "Recibes una string. Tienes que identificar el tiempo (puede estar en meses o años) y cantidad de dinero.";
+  const responseType =
+    "un número indicando la cantidad de meses y un número con solo digitos y un punto decimal, indicando la cantidad de dinero. En formato 'numeroMeses:dinero'. Donde numeroMeses y dinero son números y no contienen otros caracteres.";
+
+  const message = [
+    {
+      role: "system",
+      content: generateSystemContext(false, extraDescription, responseType),
+    },
+    {
+      role: "user",
+      content: question,
+    },
+  ];
+  return completionConfig(message);
+}
+
 export async function giveInvestOptions(userContext) {
   const investOptions = JSON.stringify(data);
   const extraDescription = `Las opciones de inversión disponibles
@@ -107,5 +126,4 @@ const generateSystemContext = (
 export const extractLastMessage = (response) => {
   const finalMessage = response.choices[response.choices.length - 1].message;
   return finalMessage.content;
-}
-
+};
