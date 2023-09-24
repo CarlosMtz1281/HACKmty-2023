@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import style from './PreguntaStyle.js'
 
+import TextField from '@mui/material/TextField';
+
 const Pregunta = ({ question, onNext, onPrevious, isFirstQuestion, inputType}) => {
   const [answer, setAnswer] = useState('');
 
@@ -20,6 +22,7 @@ const Pregunta = ({ question, onNext, onPrevious, isFirstQuestion, inputType}) =
       <h2 style={style.preguntaTxt}>{question}</h2>
 
     { inputType === 'text' ? (
+
         <input
         style={style.txtInput}
           type="text"
