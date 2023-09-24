@@ -1,14 +1,15 @@
-import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Gpt, { askInputData, giveInvestOptions, extractLastMessage} from "../public/backend/gptApi";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Header from './Components/Header/Header.jsx'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
-import LandingPage from "./pages/LandingPage";
-
-// import { connection, getUsers } from "../public/backend/db";
-
+import LandingPage from './pages/LandingPage/LandingPage.jsx'
+import CoachPage from './pages/CoachPage/CoachPage';
+import InversionesPage from './pages/InversionesPage/InversionesPage';
 
 function App() {
   const [res, setRes] = useState("Def");
@@ -73,23 +74,14 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Pregunta de llenado de datos:</h1>
-        <h2>Respuesta: </h2>
-        <p>{res2}</p>
-
-        <input type="text" value={text2} onChange={handleChange2} />
-        <button onClick={handleQuestion}> Preguntar llenado</button>
-
-        <h1>Pregunta opciones de inversion:</h1>
-        <h2>Respuesta:</h2>
-        <h2>{res3}</h2>
-        <input type="text" value={text3} onChange={handleChange3}/>
-        <button onClick={handleInvestOptions}> Llamar opciones inversion</button>
-
-        {/* <button onClick={handleButtonClick}> Hacer request</button> */}
-
-        <p>{res}</p>
+      <Header />
+      <div className="Router">
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/LandingPage" element={<LandingPage />} />
+          <Route exact path="/CoachPage" element={<CoachPage />} />
+          <Route exact path="/InversionesPage" element={<InversionesPage />} />
+        </Routes>
       </div>
     </>
   );
