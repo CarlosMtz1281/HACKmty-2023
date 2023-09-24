@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // pages
 import LandingPage from './pages/LandingPage/LandingPage.jsx'
-import CoachPage from './pages/CoachPage';
+import CoachPage from './pages/CoachPage/CoachPage.jsx';
 
 function App() {
 
