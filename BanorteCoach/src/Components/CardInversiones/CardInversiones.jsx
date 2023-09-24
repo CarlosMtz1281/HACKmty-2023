@@ -8,6 +8,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
+import inversiones from '../../assets/inversiones';
+
 
 
 const styleModal1 = {
@@ -24,6 +26,18 @@ const styleModal1 = {
 
 export default function CardInversiones(props) {
     const { name, percentage, risk } = props;
+
+    const item = () =>{
+        for(let i = 0; i < inversiones.length; i++){
+            if(inversiones[i].Nombre == name){
+                return inversiones[i];
+
+            }
+
+    }}
+    console.log(item());
+    const elemento = item();
+
     //MODAL SETERS
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -34,7 +48,7 @@ export default function CardInversiones(props) {
             <img src={img} style={style.imgContainer}/>
 
             <div style={style.headerContainer}>
-                <h1 style={style.mainInversion}>{name}</h1>
+                <h1 style={style.mainInversion}>{elemento.name}</h1>
                 <h3 style={style.compatibilidad}>Compatibilidad {percentage}</h3>
             </div>
 
@@ -52,7 +66,7 @@ export default function CardInversiones(props) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={styleModal1}>
-                <h1 style={style.modalHead}>{name}</h1>
+                <h1 style={style.modalHead}>{elemento.name}</h1>
                 <p style={style.modalTxt}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta rerum minima asperiores, adipisci iusto voluptatum, molestiae quas quisquam harum temporibus officia atque architecto? Adipisci nihil voluptate harum minus suscipit consectetur!</p>
                 </Box>
             </Modal>

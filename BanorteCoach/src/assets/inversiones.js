@@ -1,0 +1,116 @@
+export default
+  [
+    {
+      key: 1,
+      Nombre: "NTECT",
+      name: "Banorte CETE (NTECT)",
+      Imagen: "",
+      Tipo: "liquidez inmediata",
+      Riesgo: "muy bajo",
+      Objetivo: "Preservación de Capital",
+      Plazo: "corto plazo",
+      Antes: "9.16%",
+      Actual: "9.7%",
+      Mínima: "$50"
+    },
+    {
+      key: 2,
+      Nombre: "NTEDIG",
+      name: "Banorte DIGITAL (NTEDIG)",
+      Tipo: "rendimiento adicional a tus ahorros",
+      Riesgo: "muy bajo",
+      Características: "todo digital",
+      Plazo: "corto plazo",
+      Antes: "9.76%",
+      Actual: "10.35%",
+      Mínima: "$50"
+    },
+    {
+      key: 3,
+      Nombre: "NTEPZO",
+      name: "Banorte PLAZO (NTEPZO)",
+      Características: "mínimo 91 días",
+      Mínima: "$50,000",
+      Riesgo: "muy bajo",
+      Objetivo: "Preservación de Capital",
+      Plazo: "corto plazo",
+      Rendimiento: "variable",
+      Antes: "10.03%",
+      Actual: "11.56%"
+    },
+    {
+      key: 4,
+      Nombre: "NTEDLS",
+      name: "Banorte DOLARES (NTEDLS)",
+      Riesgo: "bajo",
+      Objetivo: "Preservación de Capital",
+      PlazoMínimo: "1 año",
+      Mínima: "$50",
+      Antes: "-7.1%",
+      Actual: "-14.6%",
+      Plazo: "mediano plazo"
+    },
+    {
+      key: 5,
+      Nombre: "NTED",
+      name: "Banorte ESTRATEGIA 1 (NTED)",
+      Riesgo: "moderado",
+      Objetivo: "Rendimiento superior a la deuda",
+      Plazo: "mediano plazo",
+      Mínima: "$50",
+      PlazoMínimo: "1 a 3 años",
+      Antes: "8.37%",
+      Actual: "8.26%"
+    },
+    {
+      key: 6,
+      Nombre: "NTE1",
+      name: "Banorte ESTRATEGIA 2 (NTED1)",
+      Riesgo: "moderado a alto",
+      Características: "menor exposición a la renta variable",
+      Objetivo: "Mayor exposición",
+      Plazo: "conservador",
+      PlazoMínimo: "3 años",
+      Antes: "0.39%",
+      Actual: "-1%"
+    },
+    {
+      key: 7,
+      Nombre: "NTE2",
+      name: "Banorte ESTRATEGIA 3 (NTED2)",
+      Características: "Estrategia discrecional",
+      Objetivo: "Mayor exposición en la deuda",
+      Riesgo: "alto",
+      Plazo: "largo plazo",
+      PlazoMínimo: "3 años",
+      Antes: "0.91%",
+      Actual: "-1.67%"
+    },
+    {
+      key: 8,
+      Nombre: "NTE3",
+      name: "Banorte ESTRATEGIA 4 (NTED3)",
+      Características: "Estrategia discrecional",
+      Objetivo: "Mayor exposición en la renta",
+      Riesgo: "alto",
+      "Tolerancia al Riesgo": "alta",
+      Plazo: "largo plazo",
+      PlazoMínimo: "3 años",
+      Antes: "1.86%",
+      Actual: "-1.5%"
+    },
+    {
+      key: 9,
+      Nombre: "NTEIPC+",
+      name: "Banorte IPC+  (NTEIPC)",
+      Riesgo: "muy alto",
+      Características: "bolsa mexicana de valores",
+      Tipo: "pura renta variable",
+      Plazo: "largo plazo",
+      Mínima: "$50",
+      Antes: "11.57%",
+      Actual: "5.47%",
+      PlazoMínimo: "3 a 5 años",
+    }
+  ]
+

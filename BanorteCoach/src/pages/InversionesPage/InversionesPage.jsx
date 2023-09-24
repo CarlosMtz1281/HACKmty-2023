@@ -26,10 +26,12 @@ export default function InversionesPage() {
       // console.log(JSON.stringify(investOptions))
       // const options = extractLastMessage(investOptions).split("; ");
       const options = extractLastMessage(response).split("; ");
+      console.log(options);
       for (let i = 0; i < options.length; i++) {
         options[i] = options[i].split(":");
       }
 
+      options.splice(2,2);
       setInvestOptions(options);
       setLoading(true);
     }
