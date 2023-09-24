@@ -12,7 +12,7 @@ export default function LandingPage() {
           <h1 style={style.mainTittle}> Bienvenido al Coach financiero de Banorte</h1>
 
           <Link to="/CoachPage">
-            <button style={style.startButton}> Encuentar tu inversion ideal</button>
+            <button style={style.startButton}> Encuentra tu inversión ideal</button>
             </Link>
 
 

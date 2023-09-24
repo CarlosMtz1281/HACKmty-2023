@@ -11,9 +11,9 @@ export default function CoachPage() {
 
   // questionario
   const questions = [
-    '¿Cuanto tiempo quieres invertir tu dinero?',
-    '¿Cuanto dinero vas a invertir?',
-    '¿Cuanto riesgo quieres para tu inversión?',
+    '¿Cuánto tiempo quieres invertir tu dinero?',
+    '¿Cuánto dinero vas a invertir?',
+    '¿Cuánto riesgo quieres para tu inversión?',
   ];
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
