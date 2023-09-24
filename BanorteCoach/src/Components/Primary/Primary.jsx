@@ -5,8 +5,12 @@ import React, { useState, useEffect } from 'react';
 import { styles } from './styles';
 import fondosData from '../../assets/inversiones';
 
-export default function Primary(props){
-    const { investOptions } = props;
+export default function Primary({investOptions, activeButton}){
+    console.log(activeButton)
+    if(activeButton != 'Resultados'){
+        return null;
+    }
+
     console.log(investOptions)
     return(
         <div>

@@ -82,7 +82,7 @@ function App() {
           <Route exact path="/CoachPage" element={<CoachPage />} />
           <Route exact path="/InversionesPage/:userInfo" element={<InversionesPage />} />
           <Route exact path="/InversionesPage" element={<InversionesPage />} />
-        </Routes>
+        </Routes> 
       </div>
     </>
   );

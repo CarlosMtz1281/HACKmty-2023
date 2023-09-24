@@ -1,38 +1,28 @@
-
+import style from './styles';
 import React, { useState } from 'react';
-import { styles } from './styles';
+import CardInversiones from '../CardInversiones/CardInversiones';
 
 
-const Secondary = () => {
-    // Define an array of button labels
-    const buttonLabels = ['Resultados', 'Ver Más', 'Inv. Actuales', 'Preguntas'];
-  
-    // Define state to keep track of the currently pressed button
-    const [activeButton, setActiveButton] = useState(null);
-  
-    // Function to handle button click
-    const handleButtonClick = (buttonLabel) => {
-      setActiveButton(buttonLabel);
+export default function Secondar({investOptions, activeButton}){
+    console.log(activeButton)
+    if(activeButton != 'Ver Más'){
+        return null;
+    }
 
-    };
-
+    console.log(investOptions)
     return(
-        
-        <div>
-            {buttonLabels.map((label) => (
-                <button
-                key={label}
-                className={`button ${label === activeButton ? 'active' : ''}`}
-                onClick={() => handleButtonClick(label)}
-                style={ {... styles.button,
-                    ... (label === activeButton ? styles.activeButton : {}) }}
-                >
-                {label}
-                </button>
-            ))}
-        </div>
+        <div style={style.wrap}>
+            {investOptions.map((option) => (
+          // Render CardInversiones for each option, passing it as props
+          <CardInversiones
+            key={option[0]}
+            name={option[0]}
+            percentage={option[1]}
 
+            // Add more props as needed based on your data structure
+          />
+        ))}
+
+        </div>
     )
 }
-
-export default Secondary;

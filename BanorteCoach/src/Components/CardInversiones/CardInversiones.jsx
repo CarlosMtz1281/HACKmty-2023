@@ -1,5 +1,5 @@
 import style from './CardInversionesStyle';
-import img from '../../assets/Skyline2.jpg'
+
 
 import React from 'react';
 // MUI IMPORTS
@@ -10,6 +10,28 @@ import Modal from '@mui/material/Modal';
 
 import inversiones from '../../assets/inversiones';
 
+import img1 from '../../assets/FondosImagenes/Fondo1.jpg';
+import img2 from '../../assets/FondosImagenes/Fondo2.jpeg';
+import img3 from '../../assets/FondosImagenes/Fondo3.jpeg';
+import img4 from '../../assets/FondosImagenes/Fondo4.jpeg';
+import img5 from '../../assets/FondosImagenes/Fondo5.jpeg';
+import img6 from '../../assets/FondosImagenes/Fondo6.jpeg';
+import img7 from '../../assets/FondosImagenes/Fondo7.jpeg';
+import img8 from '../../assets/FondosImagenes/Fondo8.jpeg';
+import img9 from '../../assets/FondosImagenes/Fondo9.jpeg';
+
+const imageMap = {
+    1: img1,
+    2: img2,
+    3: img3,
+    4: img4,
+    5: img5,
+    6: img6,
+    7: img7,
+    8: img8,
+    9: img9,
+
+}
 
 
 const styleModal1 = {
@@ -43,9 +65,10 @@ export default function CardInversiones(props) {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    console.log(elemento.key);
     return(
         <div style={style.cardContainer}>
-            <img src={img} style={style.imgContainer}/>
+            <img src={imageMap[elemento.key]} style={style.imgContainer}/>
 
             <div style={style.headerContainer}>
                 <h1 style={style.mainInversion}>{elemento.name}</h1>
@@ -67,7 +90,8 @@ export default function CardInversiones(props) {
             >
                 <Box sx={styleModal1}>
                 <h1 style={style.modalHead}>{elemento.name}</h1>
-                <p style={style.modalTxt}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta rerum minima asperiores, adipisci iusto voluptatum, molestiae quas quisquam harum temporibus officia atque architecto? Adipisci nihil voluptate harum minus suscipit consectetur!</p>
+                <p style={style.modalTxt}>{elemento.descripcion}</p>
+                <button onClick={handleClose}>Regresar</button>
                 </Box>
             </Modal>
         </div>
