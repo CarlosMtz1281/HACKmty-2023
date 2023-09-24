@@ -1,7 +1,11 @@
-import { styles } from './styles';
+
 import CardInversiones from '../CardInversiones/CardInversiones';
 
-const Primary = () => {
+import React, { useState, useEffect } from 'react';
+import { styles } from './styles';
+import fondosData from '../../assets/inversiones';
+
+export default function Primary() {
     return(
         <div>
             <CardInversiones />
@@ -9,5 +13,3 @@ const Primary = () => {
         </div>
     )
 }
-
-export default Primary;
