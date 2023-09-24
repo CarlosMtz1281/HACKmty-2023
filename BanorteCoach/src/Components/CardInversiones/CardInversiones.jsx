@@ -23,7 +23,7 @@ const styleModal1 = {
   };
 
 export default function CardInversiones(props) {
-
+    const { name, percentage, risk } = props;
     //MODAL SETERS
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -34,15 +34,15 @@ export default function CardInversiones(props) {
             <img src={img} style={style.imgContainer}/>
 
             <div style={style.headerContainer}>
-                <h1 style={style.mainInversion}>Banorte Plazo</h1>
-                <h3 style={style.compatibilidad}>Compatibilidad 95%</h3>
+                <h1 style={style.mainInversion}>{name}</h1>
+                <h3 style={style.compatibilidad}>Compatibilidad {percentage}</h3>
             </div>
 
             <div style={style.footerContainer}>
                  <h3 style={style.proyeccion}>Saldo final proyectado: 23,300 $</h3>
             </div>
 
-            <button style={style.button1} onClick={handleOpen}>Porque te recomndamos este Fondo</button>
+            <button style={style.button1} onClick={handleOpen}>Informacion del Fondo</button>
             <button style={style.button2}>Invertir ya</button>
 
             <Modal
@@ -52,7 +52,7 @@ export default function CardInversiones(props) {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={styleModal1}>
-                <h1 style={style.modalHead}>Porque este Fondo es para ti</h1>
+                <h1 style={style.modalHead}>{name}</h1>
                 <p style={style.modalTxt}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta rerum minima asperiores, adipisci iusto voluptatum, molestiae quas quisquam harum temporibus officia atque architecto? Adipisci nihil voluptate harum minus suscipit consectetur!</p>
                 </Box>
             </Modal>

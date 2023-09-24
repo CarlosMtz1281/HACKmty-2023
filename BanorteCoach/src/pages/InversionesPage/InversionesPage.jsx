@@ -21,23 +21,9 @@ export default function InversionesPage() {
       // const investOptions = await giveInvestOptions(userContext);
       // Use simulated response to avoid making extra unnecessary requests.
       const response = {
-        id: "chatcmpl-82CZMsg5pQiiT0axw04VuY8HF5Dd7",
-        object: "chat.completion",
-        created: 1695535664,
-        model: "gpt-3.5-turbo-0613",
-        choices: [
-          {
-            index: 0,
-            message: {
-              role: "assistant",
-              content: "NTEPZO:40%; NTED:30%; NTEDIG:20%; NTECT:10%",
-            },
-            finish_reason: "stop",
-          },
-        ],
-        usage: { prompt_tokens: 741, completion_tokens: 23, total_tokens: 764 },
+        "id":"chatcmpl-82CxeGQDl07r8Q0DyOgejmsIpez75","object":"chat.completion","created":1695537170,"model":"gpt-3.5-turbo-0613","choices":[{"index":0,"message":{"role":"assistant","content":"NTEPZO: 80%; NTED: 75%; NTEDIG: 70%; NTECT: 65%"},"finish_reason":"stop"}],"usage":{"prompt_tokens":751,"completion_tokens":27,"total_tokens":778}
       };
-
+      // console.log(JSON.stringify(investOptions))
       // const options = extractLastMessage(investOptions).split("; ");
       const options = extractLastMessage(response).split("; ");
       for (let i = 0; i < options.length; i++) {
@@ -45,9 +31,9 @@ export default function InversionesPage() {
       }
 
       setInvestOptions(options);
-      setLoading(false);
+      setLoading(true);
     }
-    
+
     fetchData();
   }, []);
 
@@ -65,7 +51,7 @@ export default function InversionesPage() {
                 <Secondary />
               </div>
               <div style={style.primaryWrap}>
-                <Primary />
+                <Primary investOptions = {investOptions}/>
               </div>
             </>
           ) : (
