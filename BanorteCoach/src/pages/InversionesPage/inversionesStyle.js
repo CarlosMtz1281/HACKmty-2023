@@ -68,7 +68,6 @@ const style = StyleSheet.create({
         width: '65vw',
         marginLeft: '15vw',
         marginTop: '-65vh',
-        backgroundColor: colors.background,
     },
 
 
