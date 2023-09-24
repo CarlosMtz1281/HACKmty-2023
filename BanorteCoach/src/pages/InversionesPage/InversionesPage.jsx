@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 import Primary from "../../Components/Primary/Primary.jsx";
 import Secondary from "../../Components/Secondary/Secondary.jsx";
+import ChatBot from "../../Components/ChatBot/ChatBot.jsx";
 import {
   giveInvestOptions,
   extractLastMessage,
@@ -74,8 +75,8 @@ export default function InversionesPage() {
         months = parseFloat(res[0]);
         money = parseFloat(res[1]);
       } catch (error) {
-        meses = 10;
-        dinero = 10000;
+        setMeses(10);
+        setDinero(10000);
       }
 
       setMeses(months);
@@ -106,7 +107,7 @@ export default function InversionesPage() {
   const buttonLabels = ['Resultados', 'Ver Más', 'Preguntas'];
 
     // Define state to keep track of the currently pressed button
-    const [activeButton, setActiveButton] = useState(null);
+    const [activeButton, setActiveButton] = useState('Resultados');
 
     // Function to handle button click
     const handleButtonClick = (buttonLabel) => {
@@ -114,7 +115,6 @@ export default function InversionesPage() {
       console.log(buttonLabel);
 
     };
-
 
 
 
@@ -146,6 +146,7 @@ export default function InversionesPage() {
               <div style={style.primaryWrap}>
                 <Primary investOptions = {recomended} activeButton={activeButton}/>
                 <Secondary investOptions = {others} activeButton={activeButton}/>
+                {(activeButton === 'Preguntas') && <ChatBot activeButton={activeButton} />}
               </div>
             </>
           ) : (
